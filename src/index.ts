@@ -14,7 +14,7 @@ const app = new Elysia()
 			.use(auth)
 			.use(blogs),
 	)
-	.listen(3001);
+	.listen(18122);
 
 console.log(
 	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
