@@ -6,7 +6,7 @@ const getBlogs = new Elysia().get(
 	async ({ query: { offset }, error }) => {
 		try {
 			const blogs = await getConnection().query(
-				"SELECT * FROM blogs ORDER BY timestamp ASC LIMIT ?, ?",
+				"SELECT * FROM blogs ORDER BY timestamp DESC LIMIT ?, ?",
 				[(offset ?? 0) * 5, (offset ?? 0) * 5 + 5],
 			);
 
